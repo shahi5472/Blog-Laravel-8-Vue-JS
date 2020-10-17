@@ -15,8 +15,7 @@
         <br>
 
         <div v-for="(blog, i) in blogs" :key="i" v-if="blogs.length">
-            <span>{{i}}</span>
-            <h2>{{blog.title}}</h2>
+            <h1>{{blog.title}}</h1>
             <p>{{blog.body}}</p>
         </div>
 
@@ -31,7 +30,11 @@
 
         <button @click="showView">Click view item</button>
 
+        <BackTop></BackTop>
+
     </div>
+
+
 
 </template>
 
@@ -49,47 +52,20 @@ data(){
         updateCounter(number){
              this.counter += number
         },
-
         showView(){
             this.showItem = !this.showItem
         }
     },
 
     created(){
-    this.counter =100
-    let posts =[
-            {
-                id:1,
-                title:'This is blog title 1',
-                'body':'this is blog body 1'
-            },
-            {
-                id:2,
-                title:'This is blog title 1',
-                'body':'this is blog body 1'
-            },
-            {
-                id:3,
-                title:'This is blog title 1',
-                'body':'this is blog body 1'
-            },
-            {
-                id:4,
-                title:'This is blog title 1',
-                'body':'this is blog body 1'
-            },
-            {
-                id:5,
-                title:'This is blog title 1',
-                'body':'this is blog body 1'
-            }
-        ]
+        this.counter =100
+        let posts =[{id:1, title:'This is blog title 1', body:'this is blog body 1'},
+            {id:2, title:'This is blog title 2', body:'this is blog body 2'},
+            {id:3, title:'This is blog title 3', body:'this is blog body 3'},
+            {id:4, title:'This is blog title 4', body:'this is blog body 4'},
+            {id:5, title:'This is blog title 5', body:'this is blog body 5'}]
 
         this.blogs = posts
     }
 }
 </script>
-
-<style scoped>
-
-</style>
