@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 //Route::group(['middleware' => 'throttle:100000,1'], function () {
 //});
 
+Route::any('{slug}', function (){
+    return view('welcome');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
