@@ -66106,60 +66106,158 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "container-fluid dashboard-main-wrapper" },
     [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
+      _c(
+        "Menu",
+        {
+          attrs: { mode: "horizontal", theme: _vm.theme1, "active-name": "1" }
+        },
+        [
+          _c(
+            "MenuItem",
+            { attrs: { name: "1" } },
+            [
+              _c(
+                "router-link",
+                { attrs: { to: "/" } },
+                [
+                  _c("Icon", { attrs: { type: "ios-paper" } }),
+                  _vm._v("\n            Home")
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "MenuItem",
+            { attrs: { name: "2" } },
+            [
+              _c(
+                "router-link",
+                { attrs: { to: "/first-vue" } },
+                [
+                  _c("Icon", { attrs: { type: "ios-people" } }),
+                  _vm._v("\n            First Page")
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "Submenu",
+            { attrs: { name: "3" } },
+            [
+              _c(
+                "template",
+                { slot: "title" },
+                [
+                  _c("Icon", { attrs: { type: "ios-stats" } }),
+                  _vm._v("\n                Second Page\n            ")
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "MenuGroup",
+                { attrs: { title: "使用" } },
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/first-vue" } },
+                    [
+                      _c("MenuItem", { attrs: { name: "3-1" } }, [
+                        _vm._v("First page")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/second-vue" } },
+                    [
+                      _c("MenuItem", { attrs: { name: "3-2" } }, [
+                        _vm._v("Second Page")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/hooks" } },
+                    [
+                      _c("MenuItem", { attrs: { name: "3-3" } }, [
+                        _vm._v("Hooks")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "MenuGroup",
+                { attrs: { title: "留存" } },
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/methods" } },
+                    [
+                      _c("MenuItem", { attrs: { name: "3-4" } }, [
+                        _vm._v("Methods")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/" } },
+                    [
+                      _c("MenuItem", { attrs: { name: "3-5" } }, [
+                        _vm._v("流失用户")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c(
+            "MenuItem",
+            { attrs: { name: "4" } },
+            [
+              _c(
+                "router-link",
+                { attrs: { to: "/" } },
+                [_c("Icon", { attrs: { type: "ios-construct" } })],
+                1
+              ),
+              _vm._v("\n            综合设置\n        ")
+            ],
+            1
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("router-view")
     ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h3", [_c("a", { attrs: { href: "/" } }, [_vm._v("Home")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h3", [
-      _c("a", { attrs: { href: "/first-vue" } }, [_vm._v("First page")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h3", [
-      _c("a", { attrs: { href: "/second-vue" } }, [_vm._v("Second page")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h3", [_c("a", { attrs: { href: "/hooks" } }, [_vm._v("Hooks")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h3", [
-      _c("a", { attrs: { href: "/methods" } }, [_vm._v("Methods")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
